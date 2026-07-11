@@ -82,13 +82,10 @@ export default function ContactView() {
                     <MapPin className="w-4.5 h-4.5" />
                   </div>
                   <div>
-                    <h4 className="text-[10px] text-slate-400 font-mono font-bold uppercase">Meeting Location</h4>
+                    <h4 className="text-[10px] text-slate-400 font-mono font-bold uppercase">Location</h4>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                     39700 38136 Smith Ct, Fremont, CA 94536
+                     38136 Smith Ct, Fremont, CA 94536
                     </p>
-                    <span className="inline-block mt-1.5 text-[10px] font-mono font-bold text-emerald-600">
-                      Saturdays, 10:00 AM - 3:00 PM
-                    </span>
                   </div>
                 </div>
               </div>
