@@ -123,7 +123,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Untitled Rocketry gives students hands-on experience designing, building, and launching high-powered model rockets. Members work on mechanical design, simulations, 3D printing, recovery systems, electronics, and flight testing.',
     image:
-      '${import.meta.env.BASE_URL}/photos/Untitled_Artwork.png',
+      `${import.meta.env.BASE_URL}photos/Untitled_Artwork.png`,
     category: 'maker',
     tags: [
       'Aerospace',
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Maker³ provides students experience with real spacecraft development workflows including mechanical structures, power systems, embedded software, communications, and mission operations.',
     image:
-      '${import.meta.env.BASE_URL}/photos/MakerSat.jpg',
+      `${import.meta.env.BASE_URL}photos/MakerSat.jpg`,
     category: 'maker',
     tags: [
       'CubeSat',
@@ -170,7 +170,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Take 3 Robotics teaches students engineering through iterative robot design, programming, control systems, and competition preparation.',
     image:
-      '${import.meta.env.BASE_URL}/photos/take3.png',
+      `${import.meta.env.BASE_URL}photos/take3.png`,
     category: 'community',
     tags: [
       'FTC',
@@ -193,7 +193,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Irvington Maker Club introduces students to engineering through CAD modeling, fabrication, design challenges, and collaborative projects.',
     image:
-      '${import.meta.env.BASE_URL}/photos/ihsmakerclublogo.png',
+      `${import.meta.env.BASE_URL}photos/ihsmakerclublogo.png`,
     category: 'community',
     tags: [
       'CAD',
@@ -216,7 +216,7 @@ export const LEADERSHIP: TeamMember[] = [
     bio:
       'Leads organization strategy, partnerships, and overall direction for Fremont Student Makers.',
     avatar:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+      `${import.meta.env.BASE_URL}photos/Srihari.jpg`,
   },
 
   {
@@ -226,7 +226,7 @@ export const LEADERSHIP: TeamMember[] = [
     bio:
       'Manages organization operations, finances, and administrative coordination.',
     avatar:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+      `${import.meta.env.BASE_URL}photos/Dylan.JPG`,
   },
 
   {
@@ -236,7 +236,7 @@ export const LEADERSHIP: TeamMember[] = [
     bio:
       'Coordinates internal communication and organizational documentation.',
     avatar:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400',
+      `${import.meta.env.BASE_URL}photos/BlankProfile.png`,
   },
 ];
 
