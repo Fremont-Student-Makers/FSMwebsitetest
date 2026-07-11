@@ -10,7 +10,9 @@ import { Compass, Menu, X, Cpu, MapPin, Mail, Github, Linkedin, MessageSquare, C
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<string>('home');
+  const [activeTab, setActiveTab] = useState<string>(() => {
+  return window.location.hash.replace('#', '') || 'home';
+});
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
@@ -47,6 +49,26 @@ export default function App() {
     };
   }, [isMobileMenuOpen]);
 
+  // Sync view changes with URL hash
+  useEffect(() => {
+    window.location.hash = activeTab;
+  }, [activeTab]);
+
+  // Handle browser back/forward buttons
+  useEffect(() => {
+    const handleHashChange = () => {
+      const tab = window.location.hash.replace('#', '') || 'home';
+      setActiveTab(tab);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newsletterEmail) {
