@@ -123,7 +123,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Untitled Rocketry gives students hands-on experience designing, building, and launching high-powered model rockets. Members work on mechanical design, simulations, 3D printing, recovery systems, electronics, and flight testing.',
     image:
-      '/photos/Untitled_Artwork.png',
+      '${import.meta.env.BASE_URL}/photos/Untitled_Artwork.png',
     category: 'maker',
     tags: [
       'Aerospace',
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Maker³ provides students experience with real spacecraft development workflows including mechanical structures, power systems, embedded software, communications, and mission operations.',
     image:
-      '/photos/MakerSat.jpg',
+      '${import.meta.env.BASE_URL}/photos/MakerSat.jpg',
     category: 'maker',
     tags: [
       'CubeSat',
@@ -170,7 +170,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Take 3 Robotics teaches students engineering through iterative robot design, programming, control systems, and competition preparation.',
     image:
-      '/photos/take3.png',
+      '${import.meta.env.BASE_URL}/photos/take3.png',
     category: 'community',
     tags: [
       'FTC',
@@ -193,7 +193,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       'Irvington Maker Club introduces students to engineering through CAD modeling, fabrication, design challenges, and collaborative projects.',
     image:
-      '/photos/ihsmakerclublogo.png',
+      '${import.meta.env.BASE_URL}/photos/ihsmakerclublogo.png',
     category: 'community',
     tags: [
       'CAD',
