@@ -35,6 +35,18 @@ export default function App() {
     setIsMobileMenuOpen(false);
   }, [activeTab]);
 
+  // Prevent page scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newsletterEmail) {
@@ -101,16 +113,16 @@ export default function App() {
             {/* Logo */}
             <div 
               onClick={() => setActiveTab('home')}
-              className="flex items-center gap-2.5 cursor-pointer group"
+              className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group shrink-0"
             >
-              <div className="p-2 rounded bg-gradient-to-tr from-blue-600 to-sky-500 text-white shadow-md shadow-blue-500/10 group-hover:scale-105 transition-transform">
+              <div className="p-2 rounded bg-gradient-to-tr from-blue-600 to-sky-500 text-white shadow-md shadow-blue-500/10 group-hover:scale-105 transition-transform shrink-0">
                 <Cpu className="w-5 h-5" />
               </div>
-              <div>
-                <span className="font-display font-bold text-slate-900 tracking-tight text-sm sm:text-base">
+              <div className="min-w-0">
+                <span className="font-display font-bold text-slate-900 tracking-tight text-[13px] sm:text-base block truncate">
                    Fremont Student Makers
                 </span>
-                <span className="block text-[10px] text-emerald-600 font-mono font-bold leading-none mt-0.5">
+                <span className="block text-[9px] sm:text-[10px] text-emerald-600 font-mono font-bold leading-none mt-0.5 truncate">
                   501(c)(3) Tech & Maker Nonprofit
                 </span>
               </div>
@@ -155,45 +167,91 @@ export default function App() {
 
           </div>
         </div>
+      </nav>
 
-        {/* Mobile Navigation Dropdown */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
+      {/* Mobile Navigation Side Drawer (Moved to root level to prevent backdrop-filter position containment bugs) */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Backdrop Overlay */}
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-slate-100 bg-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[100] md:hidden"
+            />
+
+            {/* Drawer Content */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.25, ease: 'easeOut' }}
+              className="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[101] shadow-2xl flex flex-col md:hidden"
             >
-              <div className="px-4 py-3 space-y-1 shadow-inner">
+              {/* Drawer Header */}
+              <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 rounded bg-gradient-to-tr from-blue-600 to-sky-500 text-white shadow-sm">
+                    <Cpu className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-display font-black text-slate-900 tracking-tight text-xs sm:text-sm">
+                      Fremont Student Makers
+                    </span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 -mr-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="flex-grow px-6 py-6 space-y-2 overflow-y-auto">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">
+                  MAIN DIRECTORY
+                </p>
                 {navItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => {
                       setActiveTab(item.id);
+                      setIsMobileMenuOpen(false);
                     }}
-                    className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition-colors cursor-pointer block ${
+                    className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold tracking-wide transition-all cursor-pointer block ${
                       activeTab === item.id
-                        ? 'bg-slate-100 text-blue-600'
-                        : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                        ? 'bg-blue-50 text-blue-600 font-bold'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                     }`}
                   >
                     {item.label}
                   </button>
                 ))}
-                
-                {/* Mobile CTA */}
+              </div>
+
+              {/* Drawer Footer / CTA */}
+              <div className="p-6 border-t border-slate-100 bg-slate-50 space-y-4">
                 <button
-                  onClick={() => setActiveTab('contact')}
-                  className="w-full text-center py-2.5 text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-sky-600 rounded-lg shadow-md mt-4 cursor-pointer"
+                  onClick={() => {
+                    setActiveTab('contact');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full text-center py-3 text-xs font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-md shadow-blue-500/10 cursor-pointer transition-all"
                 >
-                  Join Us
+                  Join Us Today
                 </button>
+                <p className="text-[10px] text-center text-slate-400 leading-normal font-sans">
+                  Fremont Student Makers is a registered 501(c)(3) nonprofit empowering youth in Maker Education.
+                </p>
               </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Main View Area */}
       <main className="flex-grow">
