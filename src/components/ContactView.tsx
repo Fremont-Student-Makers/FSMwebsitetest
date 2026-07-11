@@ -84,8 +84,7 @@ export default function ContactView() {
                   <div>
                     <h4 className="text-[10px] text-slate-400 font-mono font-bold uppercase">Meeting Location</h4>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Fremont Municipal Community Hub<br />
-                      Workshop B, 39700 Civic Center Dr, Fremont, CA 94538
+                     39700 38136 Smith Ct, Fremont, CA 94536
                     </p>
                     <span className="inline-block mt-1.5 text-[10px] font-mono font-bold text-emerald-600">
                       Saturdays, 10:00 AM - 3:00 PM

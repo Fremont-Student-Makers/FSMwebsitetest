@@ -193,7 +193,7 @@ export default function HomeView({ setActiveTab, setSelectedProject }: HomeViewP
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PROJECTS.filter(p => p.id === 'cubesat' || p.id === 'rovers' || p.id === 'robotics').map((project) => (
+            {PROJECTS.filter(p => p.id === 'makersat' || p.id === 'rocketry' || p.id === 'robotics').map((project) => (
               <div 
                 key={project.id} 
                 onClick={() => {
@@ -319,7 +319,12 @@ export default function HomeView({ setActiveTab, setSelectedProject }: HomeViewP
         </div>
       </section>
 
-      {/* Voices of Fremont Student Makers (Testimonials) */}
+
+
+
+      {/* Voices of Fremont Student Makers (Testimonials) */} 
+
+      {/*
       <section className="py-16 md:py-20 bg-white border-t border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -345,12 +350,15 @@ export default function HomeView({ setActiveTab, setSelectedProject }: HomeViewP
           </div>
         </div>
       </section>
+      */} 
+            
+
 
       {/* Sponsors Preview */}
       <section className="py-12 bg-slate-50 border-t border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">
-            TRUSTED AND SUPPORTED BY LEADING REGIONAL ORGANIZATIONS
+            TRUSTED AND SUPPORTED BY:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-center opacity-85">
             {SPONSORS.map((sponsor, index) => (

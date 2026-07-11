@@ -326,8 +326,7 @@ export default function App() {
                 <li className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
                   <span>
-                    Fremont Municipal Community Hub<br />
-                    Civic Center Dr, Fremont, CA 94538
+                    38136 Smith Ct, Fremont, CA 94536
                   </span>
                 </li>
               </ul>

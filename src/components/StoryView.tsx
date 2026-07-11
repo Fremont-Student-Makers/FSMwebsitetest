@@ -209,14 +209,12 @@ export default function StoryView() {
           <div className="relative z-10 max-w-3xl">
             <h2 className="text-xl sm:text-2xl font-display font-bold text-slate-900 mb-4">Our Future Ambitions</h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-sans">
-              We aren't stopping here. As Fremont Student Makers continues to grow, we are scaling our infrastructure to tackle advanced autonomous rovers, collaborative student payloads, and custom IoT mesh communication networks.
+              We aren't stopping here. As Fremont Student Makers continues to grow, we plan to expand our reach and impact in the community. Here are some of our upcoming initiatives:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 font-sans">
               {[
-                { title: 'Embedded Sensor Stands', desc: 'Secure custom calibration platforms and testing benches to dry-test and calibrate environmental sensor nodes.' },
                 { title: 'Academic Partnerships', desc: 'Partner with local Bay Area university research squads for advanced smart agriculture and microclimate studies.' },
-                { title: 'Statewide Advocacy', desc: 'Draft legislative recommendations to make engineering and prototyping facilities accessible and safe for youth nonprofits.' },
-                { title: 'Global Chapters', desc: 'Sponsor local student maker chapters in municipal libraries nationwide, sharing lesson plans and CAD models.' }
+                { title: 'Student Makerspace', desc: 'Establish a Fremont municipal makerspace for students to learn, build, and collaborate on advanced technology projects.' },
               ].map((item, index) => (
                 <div key={index} className="flex gap-2">
                   <ChevronRight className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
