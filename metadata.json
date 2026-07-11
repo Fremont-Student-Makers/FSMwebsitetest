@@ -1,0 +1,6 @@
+{
+  "name": "Fremont Student Makers",
+  "description": "Official website of Fremont Student Makers, a student-run 501(c)(3) nonprofit empowering youth in hands-on technology, robotics, and maker education.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
