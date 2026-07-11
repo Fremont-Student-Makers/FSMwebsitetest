@@ -8,6 +8,7 @@ import ResourcesView from './components/ResourcesView';
 import ContactView from './components/ContactView';
 import { Compass, Menu, X, Cpu, MapPin, Mail, Github, Linkedin, MessageSquare, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import Ficon from './photos/Ficon.png';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>(() => {
@@ -138,7 +139,11 @@ export default function App() {
               className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group shrink-0"
             >
               <div className="p-2 rounded bg-gradient-to-tr from-blue-600 to-sky-500 text-white shadow-md shadow-blue-500/10 group-hover:scale-105 transition-transform shrink-0">
-                <Cpu className="w-5 h-5" />
+                <img
+                  src={Ficon}
+                  alt="Fremont Student Makers"
+                  className="w-5 h-5 object-contain"
+                />
               </div>
               <div className="min-w-0">
                 <span className="font-display font-bold text-slate-900 tracking-tight text-[13px] sm:text-base block truncate">
@@ -216,7 +221,11 @@ export default function App() {
               <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="p-1.5 rounded bg-gradient-to-tr from-blue-600 to-sky-500 text-white shadow-sm">
-                    <Cpu className="w-4 h-4" />
+                    <img
+                    src={Ficon}
+                    alt="Fremont Student Makers"
+                    className="w-5 h-5 object-contain"
+                    />
                   </div>
                   <div>
                     <span className="font-display font-black text-slate-900 tracking-tight text-xs sm:text-sm">
@@ -303,7 +312,11 @@ export default function App() {
                 className="flex items-center gap-2 cursor-pointer w-fit group"
               >
                 <div className="p-2 rounded bg-gradient-to-tr from-blue-600 to-sky-500 text-white shadow">
-                  <Cpu className="w-4 h-4" />
+                  <img
+                    src={Ficon}
+                    alt="Fremont Student Makers"
+                    className="w-5 h-5 object-contain"
+                  />
                 </div>
                 <span className="font-display font-bold text-slate-900 tracking-tight">
                   Fremont Student Makers
