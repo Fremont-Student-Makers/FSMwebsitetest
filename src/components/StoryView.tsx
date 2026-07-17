@@ -58,39 +58,39 @@ export default function StoryView() {
           <div className="grid grid-cols-2 gap-4 font-sans">
             <div className="relative h-60 sm:h-72 rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" 
+                src={`${import.meta.env.BASE_URL}photos/MazeBooth2025.jpg`} 
                 alt="Students analyzing rover chassis" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover filter brightness-95"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4">
-                <span className="text-[10px] text-sky-300 font-mono font-bold">FIELD TESTING</span>
-                <p className="text-xs text-white font-semibold">Sensor Calibration Setup</p>
+                <span className="text-[10px] text-sky-300 font-mono font-bold">Our Reach</span>
+                <p className="text-xs text-white font-semibold">First Booth at our School</p>
               </div>
             </div>
             <div className="space-y-4">
               <div className="relative h-28 sm:h-34 rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
                 <img 
-                  src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=400" 
+                  src={`${import.meta.env.BASE_URL}photos/Rocket Tour2.jpg`} 
                   alt="3D printing customized cases" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover filter brightness-95"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 to-transparent p-3">
-                  <p className="text-[10px] text-emerald-300 font-mono font-bold">MANUFACTURING</p>
-                  <p className="text-xs text-white font-semibold">3D Printed Casings</p>
+                  <p className="text-[10px] text-emerald-300 font-mono font-bold">Collaboration</p>
+                  <p className="text-xs text-white font-semibold">Meeting with IST</p>
                 </div>
               </div>
               <div className="relative h-28 sm:h-34 rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm">
                 <img 
-                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400" 
+                  src={`${import.meta.env.BASE_URL}photos/Rocket Tour3.jpg`} 
                   alt="Telemetry visualizer" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover filter brightness-95"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 to-transparent p-3">
-                  <p className="text-[10px] text-purple-300 font-mono font-bold">TRANSMISSION PREP</p>
-                  <p className="text-xs text-white font-semibold">Transceiver Specs</p>
+                  <p className="text-[10px] text-purple-300 font-mono font-bold">Team</p>
+                  <p className="text-xs text-white font-semibold">Group Photo of our Members</p>
                 </div>
               </div>
             </div>

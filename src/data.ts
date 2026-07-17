@@ -97,14 +97,6 @@ export const MILESTONES: Milestone[] = [
   },
   {
     id: 'm4',
-    year: '2025',
-    title: 'Student Portfolio Ecosystem Launches',
-    description:
-      'FSM expands beyond teams by hosting individual student maker projects and portfolios under the shared organization.',
-    category: 'community',
-  },
-  {
-    id: 'm5',
     year: '2026',
     title: 'Expanded STEM Community Programs',
     description:
@@ -246,9 +238,9 @@ export const RESOURCES: ResourceCategory[] = [
     title: 'CAD & Modeling Resources',
     description: 'Learn parameter-driven 3D modeling for satellites, robotics, and custom electronic chassis.',
     items: [
-      { title: 'Onshape Student Fundamentals Guide', description: 'Step-by-step introduction to sketching, constraints, and assemblies.', link: '#', isLocked: false, type: 'link' },
+      { title: 'Onshape Student Fundamentals Guide', description: 'Step-by-step introduction to sketching, constraints, and assemblies.', link: '#', isLocked: true, type: 'link' },
       { title: 'SolidWorks CSWA Preparation Pack', description: 'Practice problems, speed modeling workflows, and exam outline.', link: '#', isLocked: true, type: 'zip' },
-      { title: 'Rover Chassis 3D Template', description: 'Official customizable base CAD model for 3D-printable environmental rovers.', link: '#', isLocked: false, type: 'zip' },
+      { title: 'Rover Chassis 3D Template', description: 'Official customizable base CAD model for 3D-printable environmental rovers.', link: '#', isLocked: true, type: 'zip' },
     ],
   },
   {
@@ -256,9 +248,9 @@ export const RESOURCES: ResourceCategory[] = [
     title: 'Programming & Embedded Tutorials',
     description: 'Code guides for real-time firmware, telemetry networks, and sensor logging.',
     items: [
-      { title: 'ESP32 RTOS Sensing Framework', description: 'Guide on handling GPS, temperature, and atmospheric logging in separate tasks.', link: '#', isLocked: false, type: 'pdf' },
+      { title: 'ESP32 RTOS Sensing Framework', description: 'Guide on handling GPS, temperature, and atmospheric logging in separate tasks.', link: '#', isLocked: true, type: 'pdf' },
       { title: 'C++ Safe Memory Practices for Microcontrollers', description: 'Memory budget limits and error tolerance rules for student hardware.', link: '#', isLocked: true, type: 'pdf' },
-      { title: 'Ground Station Dashboard Kit', description: 'Python/PyQt telemetry visualizer templates for real-time rover data feeds.', link: '#', isLocked: false, type: 'zip' },
+      { title: 'Ground Station Dashboard Kit', description: 'Python/PyQt telemetry visualizer templates for real-time rover data feeds.', link: '#', isLocked: true, type: 'zip' },
     ],
   },
   {
@@ -266,9 +258,9 @@ export const RESOURCES: ResourceCategory[] = [
     title: 'IoT & Environmental Sensing Guides',
     description: 'Essential manuals for microcontrollers, sensor integration, and PCB assembly.',
     items: [
-      { title: 'Arduino & ESP32 Prototyping Pack', description: 'Everything needed to build, program, and run your first wireless sensor station.', link: '#', isLocked: false, type: 'pdf' },
-      { title: 'Solar Power & Battery Safety Logic', description: 'Standard operating procedures for managing li-ion batteries and solar arrays safely.', link: '#', isLocked: false, type: 'pdf' },
-      { title: '3D Printing & Fabrication Guide', description: 'Best practices for printing robust parts, choosing plastics, and structural engineering.', link: '#', isLocked: false, type: 'pdf' },
+      { title: 'Arduino & ESP32 Prototyping Pack', description: 'Everything needed to build, program, and run your first wireless sensor station.', link: '#', isLocked: true, type: 'pdf' },
+      { title: 'Solar Power & Battery Safety Logic', description: 'Standard operating procedures for managing li-ion batteries and solar arrays safely.', link: '#', isLocked: true, type: 'pdf' },
+      { title: '3D Printing & Fabrication Guide', description: 'Best practices for printing robust parts, choosing plastics, and structural engineering.', link: '#', isLocked: true, type: 'pdf' },
     ],
   },
   {
@@ -276,7 +268,7 @@ export const RESOURCES: ResourceCategory[] = [
     title: 'Student Space Lab References',
     description: 'Systems engineering documentation and low Earth orbit sensor standards.',
     items: [
-      { title: 'Satellite Engineering 101 Handbook', description: 'A detailed walkthrough of mission timelines, structural reviews, and code checklists.', link: '#', isLocked: false, type: 'link' },
+      { title: 'Satellite Engineering 101 Handbook', description: 'A detailed walkthrough of mission timelines, structural reviews, and code checklists.', link: '#', isLocked: true, type: 'link' },
       { title: 'Maker3 Sensor Subsystem Software Spec', description: 'Complete architecture map of the command and environmental data handling systems.', link: '#', isLocked: true, type: 'doc' },
       { title: 'Thermal & Vacuum Simulation Plans', description: 'How to simulate extreme temperatures and conditions for custom student boards.', link: '#', isLocked: true, type: 'pdf' },
     ],
@@ -286,9 +278,9 @@ export const RESOURCES: ResourceCategory[] = [
     title: 'Safety & Regulatory Documents',
     description: 'Strict guidelines to guarantee workshop safety and amateur band radio compliance.',
     items: [
-      { title: 'FSM Workshop Operations Safety Code', description: 'Mandatory workshop tool usage, soldering guidelines, and eye safety rules.', link: '#', isLocked: false, type: 'pdf' },
+      { title: 'FSM Workshop Operations Safety Code', description: 'Mandatory workshop tool usage, soldering guidelines, and eye safety rules.', link: '#', isLocked: true, type: 'pdf' },
       { title: 'FCC Amateur Radio License Guide', description: 'Blank forms with guided examples to secure local frequencies for student radios.', link: '#', isLocked: true, type: 'doc' },
-      { title: 'Lithium Battery Storage Protocol', description: 'Safe charging, transport, and fire prevention guidelines in the student workshop.', link: '#', isLocked: false, type: 'pdf' },
+      { title: 'Lithium Battery Storage Protocol', description: 'Safe charging, transport, and fire prevention guidelines in the student workshop.', link: '#', isLocked: true, type: 'pdf' },
     ],
   },
 ];

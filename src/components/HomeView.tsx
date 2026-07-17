@@ -138,7 +138,7 @@ export default function HomeView({ setActiveTab, setSelectedProject }: HomeViewP
             </h2>
             <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
               We believe that students shouldn't have to wait until graduate school to design advanced electronic hardware. 
-              By establishing fully student-managed technology and maker programs, we provide the safety training, financial backing, 
+              By establishing fully student-managed technology and maker programs, we help provide the materials, financial backing, 
               and technical mentorship needed to let middle and high school students spearhead genuine engineering marvels.
             </p>
             <div className="mt-6 space-y-4">
@@ -167,8 +167,8 @@ export default function HomeView({ setActiveTab, setSelectedProject }: HomeViewP
             <h3 className="text-lg font-display font-bold text-slate-900 mb-4">Our Core Focus Areas</h3>
             <div className="space-y-3">
               {[
-                { title: 'Systems Engineering', desc: 'Managing massive interdisciplinary projects with complex payloads.', bg: 'bg-slate-50' },
-                { title: 'Hardware Manufacture', desc: 'Hands-on layout boards, milling aluminum, carbon fiber, and micro-soldering.', bg: 'bg-slate-50' },
+                { title: 'Mechanical Engineering', desc: 'Managing massive interdisciplinary projects with complex payloads.', bg: 'bg-slate-50' },
+                { title: '3D Printing', desc: 'Teaching students to design and print complex 3D projects.', bg: 'bg-slate-50' },
                 { title: 'Avionics Development', desc: 'Real-time telemetry, sensor calculations, radio frequencies, and logging systems.', bg: 'bg-slate-50' },
                 { title: 'Community Support', desc: 'Sponsoring regional schools with hardware kits and running public library workshops.', bg: 'bg-slate-50' }
               ].map((item, index) => (
